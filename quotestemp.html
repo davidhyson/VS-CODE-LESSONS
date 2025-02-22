@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    </head>
+    <body>
+        <h1>Quotes</h1>
+        <p>
+            <script>
+                //Create array, prompt user, and use remainder
+                var quotes = ["Here today, gone tomorrow.", "There is always a silver lining.", "Live and let live.", "Seize the moment!", "What took you so long?"];
+                var yourNumber = prompt("Please enter a number");
+                var index = yourNumber % 5;
+                var remainder = quotes[index];
+                document.write(remainder);
+            </script>
+        </p>
+        <b></b>
+        <p>
+            <script>
+                //Create websites
+                var websites = ["<a href='https://www.facebook.com'>Face Book page</a> ", "<a href='https://www.instagram.com'>Instagram page</a> ", "<a href='https://www.twitter.com'>X page</a>"];
+                document.write(websites);
+            </script>
+        </p>
+        <b></b>
+        <p>
+            <script>
+                //Prompt user for website and add to array
+                var yourWebsite = prompt("Please enter your favorite website");
+                websites[3] = yourWebsite;
+                //websites.push(yourWebsites);
+                document.write(websites);
+            </script>
+        </p>
+        <p>
+            <script>
+                //Delete from array
+                websites.shift();
+                document.write(websites); 
+            </script>
+        </p>
+    </body>
+</html>
