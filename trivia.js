@@ -23,13 +23,13 @@ function timeResponse() {
     var hour = date.getHours();
     //if methond for the times
     if(hour >=1 && hour < 12){
-        return("Good Morning " + usernameCap);
+        return("Good Morning " + usernameCap + ".");
     }
     else if(hour >= 12 && hour <= 18){
-        return("Good Afternoon " + usernameCap);
+        return("Good Afternoon " + usernameCap + ".");
     }
     else{
-        return("Good Evening " + usernameCap);
+        return("Good Evening " + usernameCap + ".");
     }
 }
 document.getElementById("greetings").innerHTML = timeResponse();
