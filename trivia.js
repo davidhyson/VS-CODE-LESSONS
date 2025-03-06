@@ -17,17 +17,18 @@ function currentDate () {
 document.getElementById("date").innerHTML = currentDate();
 
 function timeResponse() {
+    var username = prompt("What is your first name?");
     /* return the hour of the day in 24 hour format */
     var hour = date.getHours();
     //if methond for the times
     if(hour >=1 && hour < 12){
-        return("Good Morning");
+        return("Good Morning " + username);
     }
     else if(hour >= 12 && hour <= 18){
-        return("Good Afternoon");
+        return("Good Afternoon " + username);
     }
     else{
-        return("Good Evening");
+        return("Good Evening " + username);
     }
 }
 document.getElementById("greetings").innerHTML = timeResponse();
