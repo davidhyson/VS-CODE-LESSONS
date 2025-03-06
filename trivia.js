@@ -9,12 +9,14 @@ function currentDate () {
     /*  return the numeric index of the month beginning 0 = January */
     var month = date.getMonth();
     /*  Returns the year of a Date object in four digit format */
+    var day = date.getDate();
+    /*  Returns the year of a Date object in four digit format */
     var year = date.getFullYear();
     /* create an array of month names and array of day names */
     var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
     var days = ['Sunday', 'Monday', "Tuesday", "Wednesday", "Thursday","Friday", "Saturday"]
     /* access the names of the day and month from the arrays using the date from the date object plus the full year */
-    return("<p>Today is " + months[date.getMonth()] + days[date.getDay()] + ", " + year + ".</p>");
+    return("<p>Today is " + days[date.getDay()] + " " + months[date.getMonth()] + " " + day + ", " + year + ".</p>");
 }
 
 
