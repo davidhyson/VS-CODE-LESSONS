@@ -18,7 +18,7 @@ document.getElementById("date").innerHTML = currentDate();
 
 function timeResponse() {
     /* return the hour of the day in 24 hour format */
-    var time = date.getHours();
+    var hour = date.getHours();
     //if methond for the times
     if(hour >=1 && hour < 12){
         return("Good Morning")
