@@ -1,0 +1,52 @@
+const questions = ["What is the capital of France?", "What is 2 + 2?", "What is the color of the sky?"];
+const answers = ["paris", "4", "blue"];
+
+function currentDate () {
+    /* create a date object */
+    var date = new Date();
+    /* return the hour of the day in 24 hour format */
+    var time = date.getHours();
+    /*  return the numeric index of the month beginning 0 = January */
+    var month = date.getMonth();
+    /*  Returns the year of a Date object in four digit format */
+    var year = date.getFullYear();
+    /* create an array of month names and array of day names */
+    var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    var days = ['Sunday', 'Monday', "Tuesday", "Wednesday", "Thursday","Friday", "Saturday"]
+    /* access the names of the day and month from the arrays using the date from the date object plus the full year */
+    return("<p>Today is " + months[date.getMonth()] + days[date.getDay()] + ", " + year + ".</p>");
+}
+
+
+document.getElementById("date").innerHTML = currentDate();
+
+
+
+function startQuiz() {
+    let score = 0;
+    let quizContainer = document.getElementById("quiz-container");
+    quizContainer.innerHTML = ""; // Clear previous content
+
+    for (let i = 0; i < questions.length; i++) {
+        let guesses = 3;
+        let userAnswer = "";
+
+        while (guesses > 0) {
+            userAnswer = prompt(questions[i]).toLowerCase(); // Get user input
+            if (userAnswer === answers[i]) {
+                score += guesses; // Award points based on attempts left
+                alert("Correct! You earned " + guesses + " points.");
+                break;
+            } else {
+                guesses--;
+                if (guesses > 0) {
+                    alert("Wrong! Try again. Attempts left: " + guesses);
+                } else {
+                    alert("Incorrect! The correct answer was: " + answers[i]);
+                }
+            }
+        }
+    }
+
+    document.getElementById("score").innerText = "Your Score: " + score;
+}
