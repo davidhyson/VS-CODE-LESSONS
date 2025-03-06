@@ -1,14 +1,10 @@
 const questions = ["What is the capital of France?", "What is 2 + 2?", "What is the color of the sky?"];
 const answers = ["paris", "4", "blue"];
+/* create a date object */
+const date = new Date();
 
 function currentDate () {
-    /* create a date object */
-    var date = new Date();
-    /* return the hour of the day in 24 hour format */
-    var time = date.getHours();
-    /*  return the numeric index of the month beginning 0 = January */
-    var month = date.getMonth();
-    /*  Returns the year of a Date object in four digit format */
+    /*  Returns an integer number, between 1 and 31, representing the day of the month for the given date according to local time. */
     var day = date.getDate();
     /*  Returns the year of a Date object in four digit format */
     var year = date.getFullYear();
@@ -18,10 +14,23 @@ function currentDate () {
     /* access the names of the day and month from the arrays using the date from the date object plus the full year */
     return("<p>Today is " + days[date.getDay()] + " " + months[date.getMonth()] + " " + day + ", " + year + ".</p>");
 }
-
 document.getElementById("date").innerHTML = currentDate();
 
-
+function timeResponse() {
+    /* return the hour of the day in 24 hour format */
+    var time = date.getHours();
+    //if methond for the times
+    if(hour >=1 && hour < 12){
+        return("Good Morning")
+    }
+    else if(hour >= 12 && hour <= 18){
+        return("Good Afternoon")
+    }
+    else{
+        return("Good Evening")
+    }
+}
+document.getElementById("greetings").innerHTML = timeResponse();
 
 function startQuiz() {
     let score = 0;
