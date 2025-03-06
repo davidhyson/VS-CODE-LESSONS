@@ -19,7 +19,6 @@ function currentDate () {
     return("<p>Today is " + days[date.getDay()] + " " + months[date.getMonth()] + " " + day + ", " + year + ".</p>");
 }
 
-
 document.getElementById("date").innerHTML = currentDate();
 
 
