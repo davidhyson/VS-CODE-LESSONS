@@ -34,6 +34,23 @@ function timeResponse() {
 }
 document.getElementById("greetings").innerHTML = timeResponse();
 
+/* validEmail validates an email address against a regular expression and returns true or false */
+function validEmail() {
+    var emailRegex = /[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}/;
+    var email = prompt("Please enter your email.");
+    while (email == null || !email.match(emailRegex)){
+        email = prompt("Please enter your email.");
+    }
+    //split using the @ part
+    var index = email.lastIndexOf("@");
+    var username_email = email.substring(0, index-1);
+    var domain = email.substring(index+1, email.length);
+    //convert to upper case
+    username_email = username_email.charAt(0).toUpperCase() + username_email.substring(1);
+    return ("Username: " + username_email +"\n Domain: " + domain);
+}
+document.getElementById("askEmail").innerHTML = validEmail();
+
 function startQuiz() {
     let score = 0;
     let quizContainer = document.getElementById("quiz-container");
