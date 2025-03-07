@@ -39,7 +39,7 @@ function validEmail() {
     var emailRegex = /[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}/;
     var email = prompt("Please enter your email.");
     while (email == null || !email.match(emailRegex)){
-        email = prompt("Please enter your email.");
+        email = prompt("Please enter a valid email.");
     }
     //split using the @ part
     var index = email.lastIndexOf("@");
@@ -50,6 +50,13 @@ function validEmail() {
     return ("Username: " + username_email +"\n Domain: " + domain);
 }
 document.getElementById("askEmail").innerHTML = validEmail();
+
+function randomQuote() {
+    var quotes = ["Here today, gone tomorrow.", "There is always a silver lining.", "Live and let live.", "Seize the moment!", "What took you so long?"];
+    let random = Math.floor(Math.random() * quotes.length); // from 0 to 4
+    return quotes[random];
+}
+document.getElementById("quote").innerHTML = randomQuote();
 
 function startQuiz() {
     let score = 0;
