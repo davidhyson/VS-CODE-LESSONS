@@ -1,5 +1,3 @@
-
-
 //var that contains the questions
 var counter = 0;
 var questions = [
@@ -8,14 +6,12 @@ var questions = [
     ["Which phone brand is Popular in the USA?", 2, "Android", "Window", "Apple"]
 ];
 
-
 //get html information
 const section =document.querySelector('section');
 const question_paragraph = document.getElementById("question");
 const answer_list = document.getElementById("answers");
 const prompt_paragraph = document.getElementById("prompt");
 //--------------
-//create
 //create button dynamically (innerHTMl deletes what was inside so it is not convenient now)
 const PlayGamebutton = document.createElement("button");
 //set the ID
@@ -27,8 +23,8 @@ section.appendChild(PlayGamebutton);
 PlayGamebutton.addEventListener("click", () => {
     PlayGame();
 })
-//function when it plays
 
+//function when it plays
 function PlayGame(){
 var current_question = questions[counter];
 question_paragraph.innerText = current_question[0];
@@ -44,6 +40,7 @@ answer_list.innerHTML = answerHTML;
 counter++;
 
 }
+
 //check answer function
 function checkAnswer(selected_index, correct_answer_index){
 if(correct_answer_index == selected_index){
