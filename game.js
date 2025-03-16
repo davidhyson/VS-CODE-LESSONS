@@ -2,7 +2,7 @@
 var counter = 0;
 var questions = [
     ["Which one is a front end framework?", 1, "Orion", "React", "MonkeyJS"],
-    ["Which company makes cameras?", 0, "SONY", "Epson", "Toshiba"],
+    ["Which company makes cameras?", 0, "Sony", "Epson", "Toshiba"],
     ["Which phone brand is Popular in the USA?", 2, "Android", "Window", "Apple"]
 ];
 
@@ -31,7 +31,7 @@ question_paragraph.innerText = current_question[0];
 current_question.shift();
 var correct_answer_index = current_question[0];
 current_question.shift();
-var answerHTML= ''
+var answerHTML = '';
 //add more to the list of answers (since there is nothing inside then it is fine to use innerHTML
 for(var i =0; i < current_question.length; i++){
     answerHTML +='<li><a href="#" onClick="checkAnswer(' + i + ', ' + correct_answer_index + ')">' + current_question[i] + '</a></li>';
