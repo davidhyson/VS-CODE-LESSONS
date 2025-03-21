@@ -1,8 +1,10 @@
 // create a months array
 var months = ['January', 'February','March','April','May','June','July','August','September','October','November', 'December'];
-//var month = months[date.getMonth()]
-document.getElementById("month").innerHTML = months[date.getMonth()];
-
+function getCurrentMonth(){
+    const date = new Date();
+    const month = date.getMonth();
+    return months[month];
+    }
 // create a tips array
 var tips=["<p>Those of  us who live through our gardens know how bittersweet it can be to see the lush green growth of  summer disappear during the cold months of  winter. Hellebores are the perfect winter garden companion to plant with another winter blooming favorite, Camellias.</p><p>Visit us this season for the exciting selection of  both of  these cool season beauties and enjoy them in your garden for years to come.</p>",
 "<p>Spring is a time of  renewal for both the gardener and the garden. Suggestions for this month: </p><ul><li> Transplants of  tomatoes should be planted by March 15th</li><li> Fertilize your  lawn after warm-season grasses are growing and have been mowed 2-3 times.</li><li> Release beneficial nematodes to control ticks, fleas, chiggers, and fire ants. </li></ul>",
