@@ -1,7 +1,7 @@
 // create a months array
 var months = ['January', 'February','March','April','May','June','July','August','September','October','November', 'December'];
-var month = months[date.getMonth()]
-document.getElementById("month").innerHTML = month;
+//var month = months[date.getMonth()]
+document.getElementById("month").innerHTML = months[date.getMonth()];
 
 // create a tips array
 var tips=["<p>Those of  us who live through our gardens know how bittersweet it can be to see the lush green growth of  summer disappear during the cold months of  winter. Hellebores are the perfect winter garden companion to plant with another winter blooming favorite, Camellias.</p><p>Visit us this season for the exciting selection of  both of  these cool season beauties and enjoy them in your garden for years to come.</p>",
