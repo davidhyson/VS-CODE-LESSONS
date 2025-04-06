@@ -46,4 +46,10 @@ $('.flower').click(function(){
         $(imgDivId).hide();
     });
 
+    //keypress event,
+    //Add keypress event to move to the first flower for each letter when the letter is typed in. Graded Rubric
+    $(document).keypress(function(e) {
+        var keyPressed = String.fromCharCode(e.which).toLowerCase();
+        window.location = "#" + keyPressed;
+    });
 });
