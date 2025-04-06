@@ -90,19 +90,25 @@ input[type='submit'] {
 }
 #pltTitle {
 	color: #07a;
-  }
+}
   
-  .botanic {
+.botanic {
 	color: darkgreen;
 	font-style: italic;
-  }
+}
   
-  .col {
+.col {
 	width: 20em;
 	padding: 1em;
 	float: left;
-  }
+}
   
-  footer {
+footer {
 	clear: both;
-  }
+}
+
+.pic {
+	border-bottom: thin dashed darkgreen;
+}
+
+.imgdiv { position: absolute;}
