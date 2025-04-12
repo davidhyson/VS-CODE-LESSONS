@@ -22,8 +22,10 @@ $(document).ready(function() {
 
     //h1 and h2,
     //Add mouseover and mouseout to headings to change color. Graded rubric
-    $('h1,h2').mouseover(function(){
-    $(this).css('color','red');
+    $('h2').mouseover(function(){
+        $('#slogan').fadeOut(slow, function() {
+            $('#caption2').show();
+        });
     });
     $('h1,h2').mouseout(function(){
     $(this).css('color','black');
