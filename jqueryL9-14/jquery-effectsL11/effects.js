@@ -29,7 +29,11 @@ $(document).ready(function() {
             $('#slogan').show();
         });
     });
-    $('h1,h2').mouseout(function(){
-    $(this).css('color','black');
+    $('h2').mouseout(function(){
+        $('#slogan').fadeOut(function() {
+            var $h2 = $('#slogan');
+            $h2.text('The Power of Flowers'); 
+            $('#slogan').show();
+        });
     });
 })
