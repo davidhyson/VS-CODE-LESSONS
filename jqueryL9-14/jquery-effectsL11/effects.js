@@ -2,7 +2,7 @@
 $(document).ready(function() {
     //hide newsSignup
     $('.#newsSignup').hide();
-    $('.main form')
+    $('.form')
     //on click event
     $('#signuplink').click(function(e) {
         e.preventDefault();
