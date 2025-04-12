@@ -1,6 +1,6 @@
 //start of the jquery
 $(document).ready(function() {
-    $('.#newsSignup').hide();
+    $('#newsSignup').hide();
     
     //on click event
     $('#signuplink').click(function(evt) {
