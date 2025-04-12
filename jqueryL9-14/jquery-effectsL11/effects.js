@@ -4,9 +4,9 @@ $(document).ready(function() {
     $('.#newsSignup').hide();
     $('.form')
     //on click event
-    $('.#signuplink').click(function(evt) {
+    $('#signuplink').click(function(evt) {
         evt.preventDefault();
-        $('.#newsSignup').slideToggle();
+        $('#newsSignup').slideToggle();
 
         var $span = $('#openclose');
         if ($span.text() === '+') {
