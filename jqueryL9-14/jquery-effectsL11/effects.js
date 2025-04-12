@@ -27,7 +27,13 @@ $(document).ready(function() {
             var $h2 = $('#slogan');
             $h2.text('Hand Picked Just for You'); 
             $('#slogan').show();
-
+        });
+    });
+    $('h2').mouseout(function(){
+        $('#slogan').fadeOut(function() {
+            var $h2 = $('#slogan');
+            $h2.text('The Powers of Flowers'); 
+            $('#slogan').show();
         });
     });
     
