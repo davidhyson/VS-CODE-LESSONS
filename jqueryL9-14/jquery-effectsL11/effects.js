@@ -23,7 +23,7 @@ $(document).ready(function() {
     //h2 slogan,
     //Use fadeIn() and fadeOut() and callback for the slogan and change the text. Graded rubric
     $('h2').mouseover(function(){
-        $('#slogan').fadeOut(normal, function() {
+        $('#slogan').fadeOut(function() {
             var $h2 = $('#slogan');
             $h2.text('Hand Picked Just for You'); 
             $('#slogan').show();
