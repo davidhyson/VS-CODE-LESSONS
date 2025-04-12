@@ -20,8 +20,8 @@ $(document).ready(function() {
         }, 1500, 'swing');
     });
 
-    //h1 and h2,
-    //Add mouseover and mouseout to headings to change color. Graded rubric
+    //h2 slogan,
+    //Use fadeIn() and fadeOut() and callback for the slogan and change the text. Graded rubric
     $('h2').mouseover(function(){
         $('#slogan').fadeOut(normal, ease, function() {
             var $h2 = $('#slogan');
