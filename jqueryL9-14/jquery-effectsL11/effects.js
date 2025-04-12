@@ -29,11 +29,5 @@ $(document).ready(function() {
             $('#slogan').show(swing);
         });
     });
-    $('h2').mouseout(function(){
-        $('#slogan').fadeOut(fast, function() {
-            var $h2 = $('#slogan');
-            $h2.text('The Power of Flowers'); 
-            $('#slogan').show(ease);
-        });
-    });
+    
 })
