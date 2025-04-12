@@ -1,7 +1,7 @@
 //start of the jquery
 $(document).ready(function() {
     //hide newsSignup
-    $('.newsSignup').hide();
+    $('.signuplink').hide();
     
     //on click event
     $('#signuplink').click(function(evt) {
