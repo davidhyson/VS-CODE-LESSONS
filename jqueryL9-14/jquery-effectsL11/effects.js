@@ -23,17 +23,17 @@ $(document).ready(function() {
     //h1 and h2,
     //Add mouseover and mouseout to headings to change color. Graded rubric
     $('h2').mouseover(function(){
-        $('#slogan').fadeOut(function() {
+        $('#slogan').fadeOut(normal, ease, function() {
             var $h2 = $('#slogan');
             $h2.text('Hand Picked Just for You'); 
-            $('#slogan').show();
+            $('#slogan').show(swing);
         });
     });
     $('h2').mouseout(function(){
-        $('#slogan').fadeOut(function() {
+        $('#slogan').fadeOut(fast, swing, function() {
             var $h2 = $('#slogan');
             $h2.text('The Power of Flowers'); 
-            $('#slogan').show();
+            $('#slogan').show(ease);
         });
     });
 })
