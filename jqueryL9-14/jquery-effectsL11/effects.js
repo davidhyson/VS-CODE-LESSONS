@@ -24,7 +24,9 @@ $(document).ready(function() {
     //Add mouseover and mouseout to headings to change color. Graded rubric
     $('h2').mouseover(function(){
         $('#slogan').fadeOut(function() {
-            $('#caption2').show();
+            var $h2 = $('#slogan');
+            $h2.text('Hand Picked Just for You'); 
+            $('#slogan').show();
         });
     });
     $('h1,h2').mouseout(function(){
