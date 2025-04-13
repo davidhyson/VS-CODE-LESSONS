@@ -26,7 +26,7 @@ $(document).ready(function() {
         $('#slogan').fadeOut(function() {
             var $h2 = $('#slogan');
             $h2.text('Hand Picked Just for You'); 
-            $('#slogan').show();
+            $('#slogan').show(600);
             //$('#slogan').fadein(slow);
         });
     });
