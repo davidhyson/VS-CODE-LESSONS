@@ -31,11 +31,11 @@ $(document).ready(function() {
         });
     });
     $('h2').mouseout(function(){
-        $('#slogan').fadeOut(function() {
+        $('#slogan').fadeOut(fast);
             var $h2 = $('#slogan');
             $h2.text('The Powers of Flowers'); 
             $('#slogan').show();
-        });
+        //});
     });
     
 })
