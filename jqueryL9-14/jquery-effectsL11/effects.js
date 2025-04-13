@@ -2,34 +2,38 @@
 $(document).ready(function() {
     $('#newsSignup').hide();
     
-    //on click event
+    //Signup link click event
     $('#signuplink').click(function(evt) {
         evt.preventDefault();
+        // Toggle form visibility with slide effect
         $('#newsSignup').slideToggle();
 
-        var $span = $('#openclose');
-        if ($span.text() === '+') {
-            $span.text('-');
-        } else {
-            $span.text('+');
-        }
-
-        $('#rose').animate({
-            right: '100px',
-            opacity: 1
-        }, 1500, 'swing');
+        // Change + to - and vice versa
+        let sign = $("#openclose").text();
+        $("#openclose").text(sign === "+" ? "-" : "+");
+        
     });
+
+    // Animate the rose image on page load
+    $('#rose').animate({
+        right: '100px',
+        opacity: 1
+    }, 1500, 'swing');
 
     //h2 slogan,
     //Use fadeIn() and fadeOut() and callback for the slogan and change the text. Graded rubric
-    $('h2').mouseover(function(){
-        $('#slogan').fadeOut(function() {
-            var $h2 = $('#slogan');
-            $h2.text('Hand Picked Just for You'); 
-            $('#slogan').show(600);
-            //$('#slogan').fadeIn(slow);
-        });
-    });
+    $("#slogan").hover(
+        function () {
+          $(this).fadeOut("normal", "linear", function () {
+            $(this).text("Hand Picked Just for You").fadeIn("slow", "swing");
+          });
+        },
+        function () {
+          $(this).fadeOut("fast", "swing", function () {
+            $(this).text("The Power of Flowers").fadeIn("slow", "linear");
+          });
+        }
+     );
     
     
 })
