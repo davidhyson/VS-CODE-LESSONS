@@ -30,13 +30,6 @@ $(document).ready(function() {
             $('#slogan').fadeIn(slow);
         });
     });
-    $('h2').mouseout(function(){
-        $('#slogan').fadeOut(function() {
-            var $h2 = $('#slogan');
-            $h2.text('The Powers of Flowers'); 
-            //$('#slogan').show();
-            $('#slogan').fadeIn(slow);
-        });
-    });
+    
     
 })
