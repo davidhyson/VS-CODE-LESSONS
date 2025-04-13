@@ -14,12 +14,6 @@ $(document).ready(function() {
         
     });
 
-    // Animate the rose image on page load
-    $('#rose').animate({
-        right: '100px',
-        opacity: 1
-    }, 1500, 'swing');
-
     //h2 slogan,
     //Use fadeIn() and fadeOut() and callback for the slogan and change the text. Graded rubric
     $("#slogan").hover(
@@ -35,5 +29,19 @@ $(document).ready(function() {
         }
      );
     
+    //Animate the rose image on page load
+    $('#rose').animate({
+        right: '100px',
+        opacity: 1
+    }, 1500, 'swing');
+
+    //Form submission event
+    //Add submit event to display the alert, hide form, fade out link and prevent form submission. Graded rubric
+    $("#newsSignup").submit(function (event) {
+        alert("Thank you for registering");
+        $(this).hide();
+        $("#signuplink").fadeTo("slow", 0.3);
+        event.preventDefault();
+    });
     
 })
