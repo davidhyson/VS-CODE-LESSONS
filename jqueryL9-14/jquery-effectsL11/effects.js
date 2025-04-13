@@ -1,11 +1,12 @@
 //start of the jquery
 $(document).ready(function() {
+    //Hide Signup form pg.183
     $('#newsSignup').hide();
     
-    //Signup link click event
+    //Signup link click event pg.192
     $('#signuplink').click(function(evt) {
-        evt.preventDefault();
-        // Toggle form visibility with slide effect
+        evt.preventDefault();//Cancels link default action pg.166
+        // Toggle form visibility with slide effect pg.190
         $('#newsSignup').slideToggle();
 
         // Change + to - and vice versa
@@ -14,7 +15,7 @@ $(document).ready(function() {
         
     });
 
-    //h2 slogan,
+    //Slogan pg.163 & pg.184
     //Use fadeIn() and fadeOut() and callback for the slogan and change the text. Graded rubric
     $('#slogan').hover(
         function () {
