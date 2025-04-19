@@ -20,33 +20,34 @@ var specials = ["<p>Don't forget our feathered friends!</p><p>All bird feeders a
 "<p><strong>Jack-O-Lanterns</strong></p><p>Pumpkins: <br>large $8.99<br>small $5.99<br>Decorative pumpkins: <br>$7.99-11.99<br>Gourds: $6.99</p>",
 "<p>Trees and shrubs: 1/2 price - in stock only.</p>",
 "<p>Christmas trees!</p><p>We have sizes from 3' to 15' and lots of varieties. Find the perfect fit for your family while they last!</p>"];
-
+// Get current date. Graded Criteria
 function getCurrentMonth(){
     const date = new Date();
     const month = date.getMonth();
     return months[month];
     }
 
-//jQuery
+//jQuery Graded Criteria
 $(document).ready(function(){
-    //If statement
+    //If statement, Add special greeting for December. Graded Criteria
     if (getCurrentMonth() == 'December'){
         const h3Element = $('<h3></h3>').text('Happy Holidays!');
         $('h2').after(h3Element);
     }
     //current month
     $('#month').text('Tips for ' + getCurrentMonth());
-    //append the copyright
+    //append the copyright. Graded Criteria
     const date = new Date();
     const year = date.getFullYear();
     $('#copy').append(year);
-    //modify the specials array
+    //modify the specials array. Graded Criteria
     const month_index = date.getMonth();
     $('#specials').html(specials[month_index]);
 
-    //change base in month
+    //change base in month, create variables based on month and season. Graded Criteria
     let season, backgroundImage, seasonColor, seasonIndex;
-    // Switch statement to determine the season based on the month
+    // Switch statement to determine the season based on the month.
+    // Change background image and heading color. Graded Criteria
     switch (month_index) {
         case 11: // December
         case 0:  // January
@@ -83,8 +84,8 @@ $(document).ready(function(){
     }
     //change the background
     $('body').css('background-image', `url(${backgroundImage})`);
-    $('#seasontips').html(tips[seasonIndex]);
+    $('#seasontips').html(tips[seasonIndex]);// Change tips html. Graded Criteria
     $('strong, h1, h2, h3').css('color', seasonColor);
-    $('#specials').addClass(season);
+    $('#specials').addClass(season);// Add a class to the specials id. Graded Criteria
 
 })    

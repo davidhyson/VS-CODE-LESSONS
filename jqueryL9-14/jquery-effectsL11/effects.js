@@ -3,7 +3,7 @@ $(document).ready(function() {
     //Hide Signup form pg.183
     $('#newsSignup').hide();
     
-    //Signup link click event pg.192
+    //Signup link click event pg.192 Graded Criteria
     $('#signuplink').click(function(evt) {
         evt.preventDefault();//Cancels link default action pg.166
         // Toggle form visibility with slide effect pg.190
@@ -16,7 +16,7 @@ $(document).ready(function() {
     });
 
     //Slogan pg.163 & pg.184
-    //Use fadeIn() and fadeOut() and callback for the slogan and change the text. Graded rubric
+    //Use fadeIn() and fadeOut() and callback for the slogan and change the text. Graded Criteria
     $('#slogan').hover(
         function () {
           $(this).fadeOut('normal', 'linear', function () {
@@ -30,14 +30,14 @@ $(document).ready(function() {
         }
      );
     
-    //Animate the rose image on page load pg.193
+    //Animate the rose image on page load pg.193 Graded Criteria
     $('#rose').animate({
         right: '100px',
         opacity: 1
     }, 1500, 'swing');
 
     //Form submission event pg.258
-    //Add submit event to display the alert, hide form, fade out link and prevent form submission. Graded rubric
+    //Add submit event to display the alert, hide form, fade out link and prevent form submission. Graded Criteria
     $('#newsSignup').submit(function (event) {
         alert("Thank you for registering");
         $(this).hide();
