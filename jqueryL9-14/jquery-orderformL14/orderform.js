@@ -125,10 +125,5 @@ $(document).ready(function() {
         $('#gTotal').text(`$${grandTotal.toFixed(2)}`);
     });
 
-    //Form submission event pg.258
-    //Add submit event to display the alert, hide form, fade out link and prevent form submission. Graded Criteria
-    $('#order').submit(function (event) {
-        alert("Thank you for registering");
-        //event.preventDefault();
-    });
+    
 });
