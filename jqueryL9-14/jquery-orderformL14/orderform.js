@@ -129,6 +129,6 @@ $(document).ready(function() {
     //Add submit event to display the alert, hide form, fade out link and prevent form submission. Graded Criteria
     $('#order').submit(function (event) {
         alert("Thank you for registering");
-        event.preventDefault();
+        //event.preventDefault();
     });
 });
