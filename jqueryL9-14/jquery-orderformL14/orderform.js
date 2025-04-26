@@ -18,7 +18,6 @@ $(document).ready(function() {
         }
     });
 
-
     $('#email').blur(function () {
         if ($(this).val().trim() === "") {
             $('#emailErr').text('Email is required');
@@ -29,7 +28,6 @@ $(document).ready(function() {
         }
     });
 
-
     $('#address').blur(function () {
         if ($(this).val().trim() === "") {
             $('#addressErr').text('Address is required');
@@ -38,7 +36,6 @@ $(document).ready(function() {
         }
     });
 
-
     $('#city').blur(function () {
         if ($(this).val().trim() === "") {
             $('#cityErr').text('City is required');
@@ -46,7 +43,6 @@ $(document).ready(function() {
             $('#cityErr').text('');
         }
     });
-
 
     $('#zip').blur(function () {
         var zipVal = $(this).val().trim();
@@ -76,7 +72,6 @@ $(document).ready(function() {
             }
         }
     });
-
 
     //order form
     $('.qty').blur(function () {
