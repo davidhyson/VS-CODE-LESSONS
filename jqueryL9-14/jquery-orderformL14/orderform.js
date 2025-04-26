@@ -124,6 +124,5 @@ $(document).ready(function() {
         const grandTotal = orderTotal + tax + shipping;
         $('#gTotal').text(`$${grandTotal.toFixed(2)}`);
     });
-
     
 });
