@@ -31,8 +31,8 @@ $(document).ready(function () {
 
     // Open a new window with the large image as the source. Must be current large image. Graded Criteria
     $('#lgPic').click(function() {
-        newWin = open($(this).attr('src'), 'popWin', 'width=640, height=480, top=100, left=200');
-        return false;
+        newWin = open($(this).attr('href'), 'popWin', 'width=640, height=480, top=100, left=200');
+        //return false;
     });
 
 });
