@@ -19,10 +19,10 @@ $(document).ready(function () {
     // Create a click event to display the thumbnail images in the larger image. Graded Criteria
     // Display new title under large image when replaced. Graded Criteria
     $('#thumbs img').each(function() {
-		// get the src attribute of the thumbnail image
+		// get the src and title attribute of the thumbnail image
 		var imgFile = $(this).attr('src');
         var newAlt = $(this).attr('alt');
-		// when the image is clicked, assign the src attribute to the lgPic
+		// when the image is clicked, assign the src and title attribute to the lgPic
 		$(this).click(function() {
 			$('#lgPic').attr('src', imgFile);
             $('#lgTitle').text(newAlt);
@@ -30,6 +30,9 @@ $(document).ready(function () {
 	}); // end each
 
     // Open a new window with the large image as the source. Must be current large image. Graded Criteria
-    
-    
+    $('#lgPic').click(function() {
+        newWin = open($(this).attr('href'), 'popWin', 'width=640, height=480, top=100, left=200');
+        return false;
+    });
+
 });
