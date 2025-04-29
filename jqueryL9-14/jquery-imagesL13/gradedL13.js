@@ -31,7 +31,7 @@ $(document).ready(function () {
 
     // Open a new window with the large image as the source. Must be current large image. Graded Criteria
     $('#lgPic').click(function () {
-        const src = $(this).attr('src');
+        var src = $(this).attr('src');
         window.open(src, '_blank');
     });
 
