@@ -126,11 +126,11 @@ $(document).ready(function() {
     // set valid flag to true
     valid = true;
     // validate Grand Total
-    if ($('#.qty').val() == "") {
-      $('#gtotalErr').text('Please enter QTY');
+    if (orderTotal == 0) {
+      $('#qtytotalErr').text('Please enter QTY');
       valid = false; // set valid flag to false if error found
     } else  {
-      $('#gtotalErr').text(' ');
+      $('#qtytotalErr').text(' ');
     }
     // return the valid flag (true or false). False will stop submission of the form
     return valid;
