@@ -73,7 +73,7 @@ $(document).ready(function() {
             }
         }
     });
-
+    //let orderTotal = 0;
     //order form
     $('.qty').blur(function () {
         let orderTotal = 0;
@@ -126,7 +126,7 @@ $(document).ready(function() {
     // set valid flag to true
     valid = true;
     // validate Grand Total
-    if ($('#gTotal').val() == "") {
+    if ($('#gTotal').val() === "") {
       $('#qtytotalErr').text('Please enter QTY');
       valid = false; // set valid flag to false if error found
     } else  {
