@@ -1,6 +1,7 @@
 $(document).ready(function() {
+    // Create regex for email (Bottom of LR1).
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
+    // validate email using regular expression (Bottom of LR1).
     function validateField(id, condition, message) {
         const value = $(`#${id}`).val().trim();
         if (!condition(value)) {
@@ -9,7 +10,7 @@ $(document).ready(function() {
             $(`#${id}Error`).text('');
         }
     }
-
+    // Blur - triggered when the cursor leaves a form element LR1
     $('#name').blur(function () {
         if ($(this).val().trim() === "") { //we use trim in case there is space  only
             $('#nameErr').text('Name is required');
@@ -120,4 +121,25 @@ $(document).ready(function() {
         $('#gTotal').text(`$${grandTotal.toFixed(2)}`);
     });
     
+    // validate everything when form is submitted
+    $('#order').submit(function() {
+    // set valid flag to true
+    valid = true;
+    // validate username
+    if ($('#gTotal').val() == "") {
+      $('#gtotalErr').text('Please enter QTY');
+      valid = false; // set valid flag to false if error found
+    } else  {
+      $('#gtotalErr').text(' ');
+    }
+    // validate age
+    if ($('#formage').val() < 18 || $('#formage').val() > 100) {
+      $("#ageErr").text('You must be between 18 and 100 to enter this contest');
+      valid = false;
+    } else {
+      $("#ageErr").text(' ');
+    }
+    // return the valid flag (true or false). False will stop submission of the form
+    return valid;
+    }); // end form submission validation
 });
