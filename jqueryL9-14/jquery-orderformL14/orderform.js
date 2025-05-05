@@ -121,12 +121,12 @@ $(document).ready(function() {
         $('#gTotal').text(`$${grandTotal.toFixed(2)}`);
     });
     
-    // validate everything when form is submitted
+    // validate order form section before form is submitted
     $('#order').submit(function() {
     // set valid flag to true
     valid = true;
-    // validate Grand Total
-    if ($('.qty').val() == "") {
+    // validate quantity
+    if ($('.qty').val() == "" || $('.qty').val() == 0) {
       $('#qtytotalErr').text('Please enter QTY');
       valid = false; // set valid flag to false if error found
     } else  {
