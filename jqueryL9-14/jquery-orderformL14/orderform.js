@@ -126,7 +126,7 @@ $(document).ready(function() {
     // set valid flag to true
     valid = true;
     // validate Grand Total
-    if (orderTotal == "") {
+    if ($('#gTotal').val() == "") {
       $('#qtytotalErr').text('Please enter QTY');
       valid = false; // set valid flag to false if error found
     } else  {
