@@ -125,19 +125,12 @@ $(document).ready(function() {
     $('#order').submit(function() {
     // set valid flag to true
     valid = true;
-    // validate username
+    // validate Grand Total
     if ($('#gTotal').val() == "") {
       $('#gtotalErr').text('Please enter QTY');
       valid = false; // set valid flag to false if error found
     } else  {
       $('#gtotalErr').text(' ');
-    }
-    // validate age
-    if ($('#formage').val() < 18 || $('#formage').val() > 100) {
-      $("#ageErr").text('You must be between 18 and 100 to enter this contest');
-      valid = false;
-    } else {
-      $("#ageErr").text(' ');
     }
     // return the valid flag (true or false). False will stop submission of the form
     return valid;
