@@ -126,7 +126,7 @@ $(document).ready(function() {
         // set valid flag to true
         valid = true;
         // validate quantity
-        if ($('.qty').val() == "" || $('.qty').val() == 0) {
+        if ($('.qty').val() == "") {
         alert("Please enter a quantity amount.");
         $('#qtytotalErr').text('Please enter QTY');
         valid = false; // set valid flag to false if error found
